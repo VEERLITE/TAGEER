@@ -35,7 +35,7 @@ local create = function(data, file, uglify)
 file = io.open(file, "w+")   
 local serialized   
 if not uglify then  
-serialized = 'serpent'.block(data, {comment = false, name = "tageer_INFO"})  
+serialized = serpent.block(data, {comment = false, name = "tageer_INFO"})  
 else  
 serialized = serpent.dump(data)  
 end    
