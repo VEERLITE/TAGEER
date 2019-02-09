@@ -35,7 +35,7 @@ local create = function(data, file, uglify)
 file = io.open(file, "w+")   
 local serialized   
 if not uglify then  
-serialized = serpent.block(data, {comment = false, name = "tageer_INFO"})  
+serialized = 'serpent'.block(data, {comment = false, name = "tageer_INFO"})  
 else  
 serialized = serpent.dump(data)  
 end    
@@ -6670,7 +6670,7 @@ tageer_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')
 end
 else
 if data.username_ == false then
-zo = '📮¦ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n📬¦ بالتاكيد هو مطور \n🍃'   
+zo = '📮¦ العضــو » ❪ '..CatchName(data.first_name_,15)..' ❫\n??¦ بالتاكيد هو مطور \n🍃'   
 tageermonshn(msg.chat_id_, result.sender_user_id_, msg.id_, zo, 16, utf8.len(CatchName(data.first_name_,15)))   
 mohmadDevtageer:sadd(DEVTAGEER..'sudo:bot',result.sender_user_id_)  
 else
