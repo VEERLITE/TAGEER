@@ -35,7 +35,7 @@ local create = function(data, file, uglify)
 file = io.open(file, "w+")   
 local serialized   
 if not uglify then  
-serialized = serpent.block(data, {comment = false, name = "tageer_INFO"})  
+serialized = serpent.block(data, {comment = false, name = "TAGEER_INFO"})  
 else  
 serialized = serpent.dump(data)  
 end    
@@ -118,7 +118,7 @@ local serialize_to_file = function(data, file, uglify)
 file = io.open(file, "w+")  
 local serialized  
 if not uglify then   
-serialized = serpent.block(data, {comment = false, name = "tageer_INFO"})  
+serialized = serpent.block(data, {comment = false, name = "TAGEER_INFO"})  
 else   
 serialized = serpent.dump(data) 
 end  
@@ -145,7 +145,7 @@ SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 SUDOUSERNAME = sudos.USERNAME
 DEVTAGEER = sudos.token:match("(%d+)")  
-NAMEBOT = (mohmadDevtageer:get(DEVTAGEER..'TAGEER:name') or 'ستورم')
+NAMEBOT = (mohmadDevtageer:get(DEVTAGEER..'TAGEER:name') or 'تيكار')
 bot_id = sudos.token:match("(%d+)")  
 chaneel = sudos.token 
 plugins = {}
