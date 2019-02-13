@@ -74,7 +74,7 @@ done
 else
 
 if ! screen -list | grep -q "boss"; then
-screen -S boss ./run R
+screen -S tageer ./run R
 fi
 screen -X -S tageer kill
 screen -S tageer ./run R
