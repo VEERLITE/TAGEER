@@ -73,7 +73,7 @@ sudo rm -fr ../.telegram-cli
 done
 else
 
-if ! screen -list | grep -q "boss"; then
+if ! screen -list | grep -q "tageer"; then
 screen -S tageer ./run R
 fi
 screen -X -S tageer kill
