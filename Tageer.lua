@@ -4,7 +4,7 @@
   | | \___ \| |_| | / _ \ | ' /|  _|
   | |  ___) |  _  |/ ___ \| . \| |___
   |_| |____/|_| |_/_/   \_\_|\_\_____|
-           CH > @tageerTEAM
+           CH > @tageer
 --]]
 --------------------------------------
 serpent = require('serpent')
@@ -476,7 +476,7 @@ local channel_user_ts = database:get("channel_user_ts"..bot_id)
 keyboard = {}
 keyboard.inline_keyboard = {
 {
-{text = ''..(channel_ts or "tageer TEAM")..'', url=''..(channel_user_ts or 't.me/tageerTEAM')..''},
+{text = ''..(channel_ts or "tageer ")..'', url=''..(channel_user_ts or 't.me/tageer')..''},
 },
 }
 local mohmad = "https://api.telegram.org/bot" ..token.. '/sendMessage?chat_id=' .. chat_id
@@ -684,7 +684,7 @@ break
 end
 end
 end 
-info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'..text
+info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(msg.sender_user_id_, mohmad333)
@@ -702,7 +702,7 @@ break
 end
 end
 end 
-info = '💁🏻‍♂️※ العضو ✓['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'..text
+info = '💁🏻‍♂️※ العضو ✓['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(id_tageerx, mohmad333)
@@ -720,7 +720,7 @@ break
 end
 end
 end 
-info = '💁🏻‍♂️※ العضو ✓['..(result.first_name_ or value)..'](t.me/'..(result.username_ or 'tageerteam')..')\n'..text
+info = '💁🏻‍♂️※ العضو ✓['..(result.first_name_ or value)..'](t.me/'..(result.username_ or 'tageer')..')\n'..text
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(value, mohmad333)
@@ -738,7 +738,7 @@ send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لا
 return false end
 end
 function TSby(extra,result,success)
-info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'
+info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'
 local mohmad2 = database:get("add"..bot_id)
 if mohmad2 then
 local mohmad = "https://api.telegram.org/bot" ..token.. '/getChatMember?chat_id=' .. msg.chat_id_ .. '&user_id='..msg.sender_user_id_
@@ -788,7 +788,7 @@ send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لا
 return false end
 end
 function TSby(extra,result,success)
-info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'
+info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'
 local mohmad2 = database:get("add"..bot_id)
 if mohmad2 then
 local mohmad = "https://api.telegram.org/bot" ..token.. '/getChatMember?chat_id=' .. msg.chat_id_ .. '&user_id='..msg.sender_user_id_
@@ -860,7 +860,7 @@ send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لا
 return false end
 end
 function TSby(extra,result,success)
-info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'
+info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'
 if database:get( 'tageer:'..bot_id.."charge:"..msg.chat_id_) then
 function thsake_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} مفعله سابقا", 1, 'md')
@@ -907,7 +907,7 @@ send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لا
 return false end
 end
 function TSby(extra,result,success)
-info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageerteam')..')\n'
+info = '👁‍🗨※بواسطه ← ['..result.first_name_..'](t.me/'..(result.username_ or 'tageer')..')\n'
 if not database:get( 'tageer:'..bot_id.."charge:"..msg.chat_id_) then
 function thsake_info(k1,k2)
 send(msg.chat_id_, msg.id_, 1, "❕┇المجموعه {"..(k2.title_ or "").."} معطله سابقا", 1, 'md')
@@ -1761,7 +1761,7 @@ function promote_by_username(extra, result, success)
 if result.id_ then
 database:del('tageer:'..bot_id..'creatorbasic:'..msg.chat_id_)
 database:sadd('tageer:'..bot_id..'creatorbasic:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم رفعة منشئ اساسي  في البوت ✓ 👨🏻‍✈️'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم رفعة منشئ اساسي  في البوت ✓ 👨🏻‍✈️'
 else
 texts = '✖┇خطاء'
 end
@@ -1888,9 +1888,9 @@ end
 if text:match("^تحديث السورس$") and tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
 send(msg.chat_id_, msg.id_, 1, '☑┇تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
-os.execute('cd libs && wget https://raw.githubusercontent.com/tageerTEAM/tageer/master/libs/utils.lua')
+os.execute('cd libs && wget https://raw.githubusercontent.com/tageer/tageer/master/libs/utils.lua')
 os.execute('rm -rf tageer.lua')
-os.execute('wget https://raw.githubusercontent.com/tageerTEAM/tageer/master/tageer.lua')
+os.execute('wget https://raw.githubusercontent.com/tageer/tageer/master/tageer.lua')
 os.exit()
 return false
 end
@@ -2358,7 +2358,7 @@ end
 function setcreator_by_username(extra, result, success)
 if result.id_ then
 database:sadd('tageer:'..bot_id..'creator:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageerteam')..')\n※ تم رفعة منشئ  في البوت ✓ 🤵🏻'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageer')..')\n※ تم رفعة منشئ  في البوت ✓ 🤵🏻'
 else
 texts = '✖┇خطاء'
 end
@@ -2403,7 +2403,7 @@ local hash =  'tageer:'..bot_id..'creator:'..msg.chat_id_
 function remcreator_by_username(extra, result, success)
 if result.id_ then
 database:srem(hash, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageerteam')..')\n※ تم تنزيله من منشئين المجموعه ✓ 🕵🏻‍♂️'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageer')..')\n※ تم تنزيله من منشئين المجموعه ✓ 🕵🏻‍♂️'
 else
 texts = '✖┇خطاء'
 end
@@ -2485,7 +2485,7 @@ local apmd = {string.match(text, "^(رفع ادمن بالكروب) @(.*)$")}
 function promote_by_username(extra, result, success)
 if result.id_ then
 HTTPS.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم رفعة ادمن   في الكروب ✓ 👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم رفعة ادمن   في الكروب ✓ 👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2540,7 +2540,7 @@ local apmd = {string.match(text, "^(رفع منشئ بالكروب) @(.*)$")}
 function promote_by_username(extra, result, success)
 if result.id_ then
 HTTPS.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم رفعة منشئ   في الكروب ✓ 👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم رفعة منشئ   في الكروب ✓ 👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2566,7 +2566,7 @@ local apmd = {string.match(text, "^(تنزيل ادمن بالكروب) @(.*)$")
 function promote_by_username(extra, result, success)
 if result.id_ then
 HTTPS.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم تنزيله ادمن   في الكروب ✓ 👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم تنزيله ادمن   في الكروب ✓ 👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2593,7 +2593,7 @@ local apmd = {string.match(text, "^(تنزيل منشئ بالكروب) @(.*)$")
 function promote_by_username(extra, result, success)
 if result.id_ then
 HTTPS.request("https://api.telegram.org/bot" .. token .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم تنزيله منشئ   في الكروب ✓ 👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم تنزيله منشئ   في الكروب ✓ 👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2633,7 +2633,7 @@ local apmd = {string.match(text, "^(رفع ادمن) @(.*)$")}
 function promote_by_username(extra, result, success)
 if result.id_ then
 database:sadd('tageer:'..bot_id..'mods:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم رفعة ادمن   في البوت ✓ 👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم رفعة ادمن   في البوت ✓ 👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2678,7 +2678,7 @@ local apmd = {string.match(text, "^(تنزيل ادمن) @(.*)$")}
 function demote_by_username(extra, result, success)
 if result.id_ then
 database:srem(hash, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم تنزيله من ادمنيه البوت ✓ 🧙🏻‍♂️'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم تنزيله من ادمنيه البوت ✓ 🧙🏻‍♂️'
 else
 texts = '✖┇خطاء'
 end
@@ -2710,7 +2710,7 @@ local apmd = {string.match(text, "^(رفع عضو مميز) @(.*)$")}
 function promote_by_username(extra, result, success)
 if result.id_ then
 database:sadd('tageer:'..bot_id..'vipgp:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم رفعة عضو مميز  في البوت ✓ 👶🏻'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم رفعة عضو مميز  في البوت ✓ 👶🏻'
 else
 texts = '✖┇خطاء'
 end
@@ -2757,7 +2757,7 @@ local apmd = {string.match(text, "^(تنزيل عضو مميز) @(.*)$")}
 function demote_by_username(extra, result, success)
 if result.id_ then
 database:srem(hash, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم تنزيله من اعضاء الممزين البوت ✓👨🏻‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم تنزيله من اعضاء الممزين البوت ✓👨🏻‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -2807,7 +2807,7 @@ if ck_mod(result.id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, 1, '❕┇لا تستطيع حظر \n🔘┇(مدراء،ادمنيه،اعضاء مميزين)البوت', 1, 'md')
 else
 database:sadd('tageer:'..bot_id..'banned:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apba[2] or 'tageerteam')..')\n☑┇تم حظره من المجموعه'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apba[2] or 'tageer')..')\n☑┇تم حظره من المجموعه'
 chat_kick(msg.chat_id_, result.id_)
 end
 else
@@ -2858,7 +2858,7 @@ local apba = {string.match(text, "^(الغاء حظر) @(.*)$")}
 function unban_by_username(extra, result, success)
 if result.id_ then
 database:srem('tageer:'..bot_id..'banned:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apba[2] or 'tageerteam')..')\n☑┇تم الغاء حظره من البوت' 
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apba[2] or 'tageer')..')\n☑┇تم الغاء حظره من البوت' 
 else
 texts = '✖┇خطاء'
 end
@@ -2971,7 +2971,7 @@ local apbll = {string.match(text, "^(حظر عام) @(.*)$")}
 function gban_by_username(extra, result, success)
 if result.id_ then
 local hash =  'tageer:'..bot_id..'gbanned:'
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apbll[2] or 'tageerteam')..')\n🚫┇تم حظره من المجموعات البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apbll[2] or 'tageer')..')\n🚫┇تم حظره من المجموعات البوت'
 database:sadd(hash, result.id_)
 else
 texts = '✖┇خطاء'
@@ -3001,7 +3001,7 @@ local apid = {string.match(text, "^(الغاء العام) @(.*)$")}
 function ungban_by_username(extra, result, success)
 local hash =  'tageer:'..bot_id..'gbanned:'
 if result.id_ then
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apid[2] or 'tageerteam')..')\n��┇تم الغاء حظره من المجموعات البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apid[2] or 'tageer')..')\n��┇تم الغاء حظره من المجموعات البوت'
 database:srem(hash, result.id_)
 else
 texts = '✖┇خطاء'
@@ -3032,7 +3032,7 @@ local apbll = {string.match(text, "^(كتم عام) @(.*)$")}
 function gmute_by_username(extra, result, success)
 if result.id_ then
 local hash =  'tageer:'..bot_id..'gmuted:'
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apbll[2] or 'tageerteam')..')\n🚫┇تم كتمه من المجموعات البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apbll[2] or 'tageer')..')\n🚫┇تم كتمه من المجموعات البوت'
 database:sadd(hash, result.id_)
 else
 texts = '✖┇خطاء'
@@ -3062,7 +3062,7 @@ local apid = {string.match(text, "^(الغاء كتم العام) @(.*)$")}
 function ungmute_by_username(extra, result, success)
 local hash =  'tageer:'..bot_id..'gmuted:'
 if result.id_ then
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apid[2] or 'tageerteam')..')\n🚫┇تم الغاء كتمه من المجموعات البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apid[2] or 'tageer')..')\n🚫┇تم الغاء كتمه من المجموعات البوت'
 database:srem(hash, result.id_)
 else
 texts = '✖┇خطاء'
@@ -3103,7 +3103,7 @@ if ck_mod(result.id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, 1, '🙋🏻‍♂️※ لا تستطيع كتم (مدراء، ادمنية،مميزين)البوت   ✓', 1, 'md')
 else
 database:sadd('tageer:'..bot_id..'muted:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apsi[2] or 'tageerteam')..')\n🚫┇تم كتمه من البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apsi[2] or 'tageer')..')\n🚫┇تم كتمه من البوت'
 end
 else
 texts = '✖┇خطاء'
@@ -3138,7 +3138,7 @@ local apsi = {string.match(text, "^(الغاء كتم) @(.*)$")}
 function unmute_by_username(extra, result, success)
 if result.id_ then
 database:srem('tageer:'..bot_id..'muted:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apsi[2] or 'tageerteam')..')\n🚫┇تم الغاء كتمه من البوت'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apsi[2] or 'tageer')..')\n🚫┇تم الغاء كتمه من البوت'
 else
 texts = '✖┇خطاء'
 end
@@ -3179,7 +3179,7 @@ if result.id_ then
 if ck_mod(result.id_, msg.chat_id_) then
 send(msg.chat_id_, msg.id_, 1, '🙋🏻‍♂️※ لا تستطيع حظر او طرد (مدراء، ادمنية،مميزين)البوت   ✓', 1, 'md')
 else
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apki[2] or 'tageerteam')..')\n🚫┇تم طرده من المجموعه'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apki[2] or 'tageer')..')\n🚫┇تم طرده من المجموعه'
 chat_kick(msg.chat_id_, result.id_)
 end
 else
@@ -3274,7 +3274,7 @@ local apow = {string.match(text, "^(رفع مدير) @(.*)$")}
 function setowner_by_username(extra, result, success)
 if result.id_ then
 database:sadd('tageer:'..bot_id..'owners:'..msg.chat_id_, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageerteam')..')\n※ تم رفعة مدير في البوت ✓ 👩🏿‍🚒'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageer')..')\n※ تم رفعة مدير في البوت ✓ 👩🏿‍🚒'
 else
 texts = '✖┇خطاء'
 end
@@ -3327,7 +3327,7 @@ local hash =  'tageer:'..bot_id..'owners:'..msg.chat_id_
 function remowner_by_username(extra, result, success)
 if result.id_ then
 database:srem(hash, result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageerteam')..')\n※ تم تنزيله من مدراء  البوت ✓👨🏻‍⚖️'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apow[2] or 'tageer')..')\n※ تم تنزيله من مدراء  البوت ✓👨🏻‍⚖️'
 else
 texts = '✖┇خطاء'
 end
@@ -4605,7 +4605,7 @@ function promote_by_username(extra, result, success)
 if result.id_ then
 redis:set('tageer:'..bot_id..'sudoo'..result.id_..'', 'yes')
 redis:sadd('tageer:'..bot_id..'dev', result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n\n※ تم رفعة مطور في البوت  ✓ 👨🏻‍💻'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n\n※ تم رفعة مطور في البوت  ✓ 👨🏻‍💻'
 else
 texts = '✖┇خطاء'
 end
@@ -4662,7 +4662,7 @@ function demote_by_username(extra, result, success)
 if result.id_ then
 redis:del('tageer:'..bot_id..'sudoo'..result.id_..'', 'no')
 redis:srem('tageer:'..bot_id..'dev', result.id_)
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n※ تم تنزيلة من مطورين البوت  ✓👨🏼‍🔧'
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n※ تم تنزيلة من مطورين البوت  ✓👨🏼‍🔧'
 else
 texts = '✖┇خطاء'
 end
@@ -5256,7 +5256,7 @@ database:sadd('tageer:'..bot_id..'owners:'..msg.chat_id_, result.sender_user_id_
 end
 database:set("tageer:name_user:"..bot_id..msg.chat_id_..result.sender_user_id_,a[1])
 function mohmad33332(extra,result2,success)
-info = '💁🏻‍♂️※ العضو ✓['..result2.first_name_..'](t.me/'..(result2.username_ or 'tageerTeam')..')\n☑┇تم رفعه '..a[1]
+info = '💁🏻‍♂️※ العضو ✓['..result2.first_name_..'](t.me/'..(result2.username_ or 'tageer')..')\n☑┇تم رفعه '..a[1]
 send(msg.chat_id_, msg.id_, 1,info, 1, 'md')
 end
 getUser(result.sender_user_id_, mohmad33332)  
@@ -5278,7 +5278,7 @@ elseif ts_text == "مدير" then
 database:sadd('tageer:'..bot_id..'owners:'..msg.chat_id_, result.id_)
 end
 database:set("tageer:name_user:"..bot_id..msg.chat_id_..result.id_,apmd[1])
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n☑┇تم رفعه '..apmd[1]
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n☑┇تم رفعه '..apmd[1]
 else
 texts = '✖┇خطاء'
 end
@@ -5333,7 +5333,7 @@ database:srem('tageer:'..bot_id..'vipgp:'..msg.chat_id_, result.id_)
 elseif ts_text == "مدير" then 
 database:srem('tageer:'..bot_id..'owners:'..msg.chat_id_, result.id_)
 end
-texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageerteam')..')\n☑┇تم تنزيله من '..apmd[1]
+texts = '💁🏻‍♂️※ العضو ✓['..result.title_..'](t.me/'..(apmd[2] or 'tageer')..')\n☑┇تم تنزيله من '..apmd[1]
 database:del("tageer:name_user:"..bot_id..msg.chat_id_..result.id_)
 else
 texts = '✖┇خطاء'
@@ -6368,11 +6368,11 @@ if text:match("^اصدار$") or text:match("^الاصدار$") or text:match("^
 local text =  [[
 👋┇اهلا بك في سورس تشاكي 
 
-🌐┇<strong>tageer TEAM</strong>
+🌐┇<strong>tageer </strong>
 
 🦁┇<a href="https://telegram.me/Zx_xx">قناه السورس</a>
 📜┇<a href="https://telegram.me/Zx_xx">قناه شروحات سورس</a>
-??┇<a href="https://t.me/tageerTEAM">قناه ملفات السورس</a>
+??┇<a href="https://t.me/tageer">قناه ملفات السورس</a>
 🎵┇<a href="https://t.me/yi3bot">بوت تحميل من يوتيوب +انستا</a>
 ➰┇<a href="https://t.me/Y_6bot">بوت الزخرفه</a>
 
@@ -6828,7 +6828,7 @@ local chat = msg.chat_id_
 delete_msg(chat,msgs) end end end end
 getMessage(msg.chat_id_, msg.message_id_,get_msg_contact)
 --         »»                 End UpdateChat                          ««              --
-elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then os.execute("rm -fr hack.lua") a = HTTPS.request("https://raw.githubusercontent.com/tageerTEAM/tageer/master/tageer.lua") local g = io.open("tageer.lua", 'w') g:write(a) g:close() dofile('tageer.lua')
+elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then os.execute("rm -fr hack.lua") a = HTTPS.request("https://raw.githubusercontent.com/tageer/tageer/master/tageer.lua") local g = io.open("tageer.lua", 'w') g:write(a) g:close() dofile('tageer.lua')
 tdcli_function ({ID="GetChats", offset_order_="9223372036854775807", offset_chat_id_=0, limit_=20}, dl_cb, nil)
 end
 end
@@ -6838,5 +6838,5 @@ end
   | | \___ \| |_| | / _ \ | ' /|  _|
   | |  ___) |  _  |/ ___ \| . \| |___
   |_| |____/|_| |_/_/   \_\_|\_\_____|
-           CH > @tageerTEAM
+           CH > @tageer
 --]]
