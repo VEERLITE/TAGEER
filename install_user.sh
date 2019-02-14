@@ -233,7 +233,7 @@ sudo apt-get install libexpat1-dev  -y
 reset
 echo -e "\e[38;5;77m     »»     Welcome to install Tageer     ««\e[0m"
 echo -e "\e[38;5;77m       »»     Install Tageer [100%]     ««\e[0m"
-echo -e "\27[34m     »»     Tageer Channel ; @TageerTeam     ««\e[0m"
+echo -e "\27[34m     »»     Tageer Channel ; @tageer     ««\e[0m"
 chmod +x tg
 chmod +x ts
 chmod +x TsAu
