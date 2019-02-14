@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd Tshake
+screen -S Tageer -X kill
+screen -S Tageer ./TsAu
