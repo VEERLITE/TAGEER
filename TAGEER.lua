@@ -10300,7 +10300,7 @@ end
 if text == "تحديث السورس" and is_leader(msg) then 
 TAGEERdx(msg.chat_id_, msg.id_, 1, '🚦⁞ جاري تحديث السورس الى الاصدار الجديد •', 1, 'md') 
 os.execute('rm -rf TAGEER.lua') 
-os.execute('wget https://raw.githubusercontent.com/TkkllEER/TAGEERhhhgf/mastehhr/TAGEER.lua') 
+os.execute('wget https://raw.githubusercontent.com/TAGEER/TAGEER/master/TAGEER.lua') 
 TAGEERdx(msg.chat_id_, msg.id_, 1, '🚦⁞ تم تحديث السورس اكتشف المميزات الجديده الان •', 1, 'md') 
 dofile('TAGEER.lua') 
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
