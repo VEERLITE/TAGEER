@@ -26,12 +26,12 @@ print(serpent.block(value, {comment=false}))
 end 
 local AutoSet = function()
 io.write("\27[31;47m\n◼¦ ارسل ايدي مطور الاساسي  SEND ID FOR SIDO \27[0;34;49m\n")  
-local SUDO = tonumber(io.green())   
+local SUDO = tonumber(io.read())   
 if not tostring(SUDO):match('%d+') then  
 local SUDO = 267308044
 end
 io.write("\27[31;47m\n◼¦ ارسل توكن البوت        TOKEN FOR YOU \27[0;34;49m\n")  
-local token = io.green()  
+local token = io.read()  
 botid = token:match("(%d+)")
 
 local create = function(data, file, uglify)  
