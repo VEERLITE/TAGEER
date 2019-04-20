@@ -19,7 +19,7 @@ json = dofile('./JSON.lua')
 notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
-day = 313456502
+day = 267308044
 -------------------------------------------------------
 function vardump(value)  
 print(serpent.block(value, {comment=false}))  
