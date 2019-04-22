@@ -10419,4 +10419,4 @@ end
 -- END VERSION TAGEER DX 
 -- all the file by TAGEER dx @pro_c9 
 -- join in chennel @TAGEER_ch 
--- join in chennel @team_TAGEER
+- join in chennel @team_TAGEER
